@@ -11,6 +11,7 @@ body {
 .section-counter {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background-color: rgba(71, 137, 192, 1);
   color: white;
   align-items: center;
@@ -23,6 +24,16 @@ body {
   display: flex;
   align-items: center;
   gap: 15px;
+    justify-content: center;
+  }
+  .establishment-year{
+    width: 40%;
+  }
+  .members-count{
+    width: 30%;
+  }
+  .event-count{
+    width: 30%;
 }
 .counter-icon {
   height: 50px;
@@ -87,13 +98,14 @@ body {
 
 .footer-container {
   width: auto;
+  height: auto;
   /* height: 400px; */
   background-color: rgba(71, 137, 192, 1);
   color: white;
   padding-top: 30px;
   padding-bottom: 20px;
-  padding-left: 60px;
-  padding-right: 60px;
+  padding-left: 5%;
+  padding-right: 5%;
   border-top: 1px solid rgba(71, 137, 192, 1);
 }
 .footer-top {
@@ -144,9 +156,16 @@ body {
 .sitemap-container {
   /* padding-left: 80px; */
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
   /* flex: 1; */
   width: 33%;
-  text-align: center;
+  /* text-align: center; */
+}
+.sitemap-heading{
+  padding-left: 28%;
+  font-weight: 500;
+  font-size: 20px;
 }
 .footer-sitemap {
   display: flex;
@@ -225,10 +244,24 @@ body {
   .footer-top {
     flex-direction: column;
   }
+  .sitemap-container{
+    display:none;
+  }
   .footer-info,
-  .footer-contact,
-  .sitemap-container {
+  .footer-contact{
     width: 100%;
+  }
+  .footer-detail-container{
+    margin-top: 10px;
+  }
+  .counter-icon {
+    height: 40px;
+  }
+  .increasing-number {
+    font-size: 20px;
+  }
+  .section-title {
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 481px) and (max-width: 768px) {
@@ -237,18 +270,30 @@ body {
     flex-direction: column;
   }
   .footer-info {
-    width: 100%;
+    width: 48%;
+    padding-right: 2%;
   }
-  .sitemap-container,
+  .sitemap-container{
+    display: none;
+  }
   .footer-contact {
-    width: 50%;
+    width: 48%;
+    padding-left: 2%;
   }
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+  .section-counter{
+    height: 160px;
+  }
+  .establishment-year{
+    width: 55%;
+  }
+  .members-count{
+    width: 45%;
+  }
+  .event-count{
+    width: 100%;
+  }
 }
-@media screen and (min-width: 1025px) and (max-width: 1200px) {
-  /* .sitemap-container{
-        padding-left: 40px;
-        width: 240px;
-    } */
+@media screen and (min-width: 1025px) and (max-width: 1200px){
 }
